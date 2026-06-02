@@ -1,0 +1,33 @@
+cff-version: 1.2.0
+message: "If you use AnalogPilot in your work, please cite it as below."
+title: "AnalogPilot: An AI-agent-driven remote Cadence analog/mixed-signal IC design flow"
+abstract: >-
+  AnalogPilot is an independent open-source toolkit and knowledge base for
+  driving Cadence Virtuoso (SKILL), Spectre, and Mentor Calibre on a remote
+  Linux EDA server from a local workstation, turning the schematic -> pre-sim
+  -> layout -> DRC/LVS/PEX -> post-sim flow into a scriptable, reproducible
+  process. Its bridge engine is independently implemented on Cadence's public
+  SKILL IPC facility; all documentation, conventions, agent skills, and tools
+  are independently authored, distilled from a complete analog IC course-design
+  run on the School of Microelectronics EDA servers at South China University of
+  Technology.
+type: software
+authors:
+  - family-names: Guo
+    given-names: Jiacheng
+    affiliation: "School of Microelectronics, South China University of Technology"
+version: "1.1.0"
+date-released: "2026-06-02"
+license: GPL-3.0-only
+repository-code: "https://github.com/GuoJiacheng0402/analog-pilot"
+url: "https://github.com/GuoJiacheng0402/analog-pilot"
+keywords:
+  - analog IC design
+  - mixed-signal
+  - Cadence Virtuoso
+  - Spectre
+  - Calibre
+  - post-layout verification
+  - SKILL
+  - EDA automation
+  - AI agent

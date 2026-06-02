@@ -1,0 +1,39 @@
+{
+  "paths": {
+    "model": "/SM01/home/<group>/<student_id>/Design/CSMC05_M3/Model/s05mixdtssa01v12.scs",
+    "spectre": "/SM01/eda/cadence/SPECTRE/SPECTRE231/bin/spectre",
+    "run_root": "~/opa_verify"
+  },
+  "cadence": {
+    "cadence_home": "/SM01/eda/cadence",
+    "mmsim_home": "/SM01/eda/cadence/SPECTRE/SPECTRE231",
+    "cds_lic_file": "/SM01/eda/license/{hostname}/cadence/cadence_lic.dat",
+    "ld_preload": "/usr/lib64/libssl.so.1.0.2k:/usr/lib64/libcrypto.so.1.0.2k"
+  },
+  "variants": {
+    "schematic_ref": {
+      "title": "Pre-sim schematic reference",
+      "cell": "opa_v1",
+      "include": "/SM01/home/<group>/<student_id>/simulation/tb_opa_open/spectre/schematic/netlist/input.scs",
+      "port_order": "schematic"
+    },
+    "pex_norc": {
+      "title": "PEX no-R/C",
+      "cell": "opa_postlayout",
+      "include": "/SM01/home/<group>/<student_id>/work_opa_pex_no-rc_opa_postlayout/opa_postlayout.norc.simple.scs",
+      "port_order": "pex"
+    },
+    "pex_rc": {
+      "title": "PEX full R+C",
+      "cell": "opa_postlayout",
+      "include": "/SM01/home/<group>/<student_id>/work_opa_pex_r-plus-c_opa_postlayout/opa_postlayout.pex.netlist",
+      "port_order": "pex"
+    }
+  },
+  "reports": {
+    "drc": "/SM01/home/<group>/<student_id>/work_opa_drc_opa_postlayout/result.summary",
+    "lvs": "/SM01/home/<group>/<student_id>/work_opa_lvs_opa_postlayout/lvs.rep",
+    "pex_log": "/SM01/home/<group>/<student_id>/work_opa_pex_r-plus-c_opa_postlayout/gui_batch.log",
+    "lvs_cell": "opa_postlayout"
+  }
+}

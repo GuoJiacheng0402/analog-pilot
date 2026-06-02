@@ -1,0 +1,40 @@
+{
+  "cell": "bgr_postlayout",
+  "paths": {
+    "base": "/SM01/home/<group>/<student_id>",
+    "model": "/SM01/home/<group>/<student_id>/Design/CSMC05_M3/Model/s05mixdtssa01v12.scs",
+    "spectre": "/SM01/eda/cadence/SPECTRE/SPECTRE231/bin/spectre",
+    "run_root": "~/bgr_verify",
+    "drc_summary": "/SM01/home/<group>/<student_id>/work_bgr_drc_bgr_postlayout/result.summary",
+    "lvs_report": "/SM01/home/<group>/<student_id>/work_bgr_lvs_bgr_postlayout/lvs.rep",
+    "gds": "/SM01/home/<group>/<student_id>/work_bgr_drc_bgr_postlayout/bgr_postlayout.gds",
+    "cdl": "/SM01/home/<group>/<student_id>/work_bgr_lvs_bgr_postlayout/bgr_postlayout.cdl",
+    "pex_norc": "/SM01/home/<group>/<student_id>/work_bgr_pex_no-rc_bgr_postlayout/bgr_postlayout.norc.simple.scs",
+    "pex_norc_log": "/SM01/home/<group>/<student_id>/work_bgr_pex_no-rc_bgr_postlayout/gui_batch.log",
+    "pex_norc_fmt_log": "/SM01/home/<group>/<student_id>/work_bgr_pex_no-rc_bgr_postlayout/xrc_fmt_simple.log",
+    "pex_rc": "/SM01/home/<group>/<student_id>/work_bgr_pex_r-plus-c_bgr_postlayout/bgr_postlayout.pex.netlist",
+    "pex_rc_log": "/SM01/home/<group>/<student_id>/work_bgr_pex_r-plus-c_bgr_postlayout/gui_batch.log",
+    "pex_deck": "/SM01/home/<group>/<student_id>/Calibre/pex/csmccalibre.xrc.t3",
+    "course_gui_runset": "/SM01/home/<group>/<student_id>/course_digitalic/calibre/pex.runset"
+  },
+  "cadence": {
+    "cadence_home": "/SM01/eda/cadence",
+    "mmsim_home": "/SM01/eda/cadence/SPECTRE/SPECTRE231",
+    "cds_lic_file": "/SM01/eda/license/{hostname}/cadence/cadence_lic.dat",
+    "ld_preload": "/usr/lib64/libssl.so.1.0.2k:/usr/lib64/libcrypto.so.1.0.2k"
+  },
+  "calibre": {
+    "calibre_home": "/SM01/eda/mentor/Calibre2024/aoj_202401/aoj_cal_2024.1_28.16",
+    "mgls_license_file": "/SM01/eda/license/{hostname}/mentor/mentor_lic.dat"
+  },
+  "variants": {
+    "pex_rc": {
+      "title": "PEX full R+C",
+      "pex_mode": "r-plus-c"
+    },
+    "pex_norc": {
+      "title": "PEX no-R/C SIMPLE",
+      "pex_mode": "no-rc"
+    }
+  }
+}

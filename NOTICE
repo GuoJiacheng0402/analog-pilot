@@ -1,0 +1,23 @@
+AnalogPilot  (analog-pilot)
+===========================
+
+面向华南理工大学微电子学院 EDA 服务器的「AI 智能体驱动的 Cadence 模拟/混合信号
+IC 设计全流程」开源套件。
+
+Copyright (c) 2026 GuoJiacheng and the AnalogPilot contributors.
+Developed with AI-assisted coding and documentation support from Claude (Anthropic).
+
+本项目以 GNU GPL v3.0 发布（含 GPL-3.0 第 7(b) 条「署名保留」附加条款），许可证全文见
+根目录 LICENSE 文件。
+
+本项目是一个**独立、自主实现**的开源项目；项目自身源码、文档与工具未复制、嵌入或派生自
+任何第三方项目代码。其桥接引擎（`src/apilot/`，基于 Cadence 公开的 SKILL IPC 设施独立
+实现）、文档知识库（`docs/`）、技能（`skills/`）、工具脚本（`tools/`）、模板与配置示例，
+均由本项目作者独立编写。它们提炼自作者在微电子学院完成《模拟集成电路原理与设计》课程
+设计的全过程，目的是将其中验证有效的工程经验与常见错误的解决方案固化为可复用的文档与
+工具，供后续使用者参考。Python 运行依赖以 `pyproject.toml` 中声明为准。
+
+本项目不包含任何商业 PDK / 工艺库本体或受 NDA 约束的工艺数据；所有模型与规则文件均引用
+服务器上由学院统一安装的版本。
+
+学术使用须署名引用，详见 ACADEMIC_USE.md 与 CITATION.cff。

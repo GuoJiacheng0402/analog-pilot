@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="220" viewBox="0 0 1000 220" role="img" aria-label="AnalogPilot">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1220"/>
+      <stop offset="1" stop-color="#15233b"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#38bdf8"/>
+      <stop offset="1" stop-color="#818cf8"/>
+    </linearGradient>
+    <style>
+      .wm   { font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif; font-weight: 700; }
+      .tag  { font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif; font-weight: 400; }
+      .mono { font-family: "SFMono-Regular", "JetBrains Mono", Consolas, monospace; font-weight: 500; }
+    </style>
+  </defs>
+
+  <rect width="1000" height="220" rx="16" fill="url(#bg)"/>
+  <rect x="0" y="0" width="6" height="220" fill="url(#accent)"/>
+
+  <!-- subtle signal motif (open-loop AC sweep) -->
+  <g stroke="url(#accent)" stroke-width="2.5" fill="none" opacity="0.28">
+    <path d="M620 56 H760 q24 0 24 26 v40 q0 26 -24 26 H700 q-24 0 -24 26 v18"/>
+    <path d="M812 60 V160 M860 60 V160 M908 60 V160"/>
+    <path d="M790 110 H940"/>
+    <circle cx="812" cy="110" r="4" fill="url(#accent)" stroke="none"/>
+    <circle cx="908" cy="110" r="4" fill="url(#accent)" stroke="none"/>
+  </g>
+
+  <text x="60" y="104" class="wm" font-size="58" fill="#f8fafc">Analog<tspan fill="url(#accent)">Pilot</tspan></text>
+  <text x="62" y="146" class="tag" font-size="22" fill="#cbd5e1">AI 智能体驱动的模拟 / 混合信号 IC 设计全流程</text>
+  <text x="62" y="178" class="mono" font-size="15" fill="#64748b">Virtuoso · Spectre · Calibre   —   schematic → pre-sim → layout → DRC/LVS/PEX → post-sim</text>
+</svg>

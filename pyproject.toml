@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "analog-pilot"
+version = "1.1.0"
+description = "AI-agent-driven remote Cadence Virtuoso/Spectre flow for the SCUT School of Microelectronics EDA servers"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "GPL-3.0-only" }
+authors = [{ name = "GuoJiacheng" }]
+dependencies = [
+    "python-dotenv>=1.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/GuoJiacheng0402/analog-pilot"
+
+# Importable package: `apilot`. CLI command: `apilot`.
+[project.scripts]
+apilot = "apilot.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+"apilot" = ["resources/*.il", "resources/*.py"]

@@ -1,0 +1,38 @@
+#!/bin/csh
+# ============================================================================
+#  cadence_env.csh —— 供桥接「Spectre 独立通道」使用的 csh 环境脚本模板
+# ============================================================================
+#
+#  用途说明：
+#    桥接以 `csh -c 'source $APILOT_CADENCE_CSHRC; <cmd>'` 加载 Cadence 环境并定位
+#    远端的 `spectre`，要求该文件为 csh 语法。而学校提供的
+#    /SM01/eda/env_set/bashrc_cds 为 bash 语法，不能直接用作 APILOT_CADENCE_CSHRC。
+#
+#    纯 SKILL 模式无需本文件（APILOT_CADENCE_CSHRC 留空即可）。仅当需要使用桥接直接
+#    运行手写 / 提取后的 netlist（Spectre 独立通道）时，按以下步骤使用：
+#      1) 将下列占位符替换为服务器的实际值（<hostname> 换成你的服务器主机名）；
+#      2) 置于服务器，例如 ~/.apilot_cadence.csh；
+#      3) 在 .env 中设置
+#         APILOT_CADENCE_CSHRC=/SM01/home/<grade>/<学号>/.apilot_cadence.csh
+#
+#  下方为**实测可用的最小骨架**（已在 SCUT 服务器上验证 `which spectre` 与实际
+#  Spectre 仿真均通过）。要点：只需把 spectre 放上 PATH + 配好 license 即可，
+#  无需照搬 bashrc_cds 的全部内容。
+# ============================================================================
+
+setenv CADHOME   /SM01/eda/cadence
+setenv CDSHOME   $CADHOME/IC618
+setenv MMSIMHOME $CADHOME/SPECTRE/SPECTRE231
+
+# License（<hostname> 换成你的服务器主机名）
+setenv CDS_LIC_FILE /SM01/eda/license/<hostname>/cadence/cadence_lic.dat
+setenv CDS_LIC_ONLY 1
+
+# 只需把 Spectre 与 dfII 的 bin 放上 PATH
+setenv PATH ${PATH}:${MMSIMHOME}/bin:${CDSHOME}/tools/dfII/bin
+
+# ⚠️ 不要在此设置 LD_PRELOAD（bashrc_cds 里那条老版 OpenSSL 的 LD_PRELOAD）：
+#    它会让随后启动的 python / 工具异常。桥接的 SKILL daemon 也正是因为要避开它，
+#    才在启动时显式 `env -u LD_PRELOAD -u LD_LIBRARY_PATH`。
+
+# 验证（手动调试时）：csh -c 'source ~/.apilot_cadence.csh; which spectre'
