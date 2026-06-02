@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+env/
+.coverage
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+htmlcov/
+
+# Local config — NEVER commit your real server/account settings
+.env
+*.local.json
+configs/*.local.json
+tools/postlayout-verify/configs/*.local.json
+
+# Runtime / scratch
+*.log
+runs/
+output/
+full_flow_demo_out/
+*.tmp
+*.raw
+*.dc
+*.tran
+*.ac
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
+*.swp

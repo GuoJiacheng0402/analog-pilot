@@ -1,0 +1,37 @@
+name: CI
+
+# Lightweight checks that need no EDA server: install the package on a clean
+# machine, import it, and byte-compile the source. This catches packaging,
+# dependency, and Python-version regressions before launch.
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.9", "3.12"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install
+        run: pip install -e .
+      - name: Import + version
+        run: python -c "import apilot; print('apilot', apilot.__version__); from apilot import SkillClient, SpectreRunner, LayoutEditor, parse_psf_ascii"
+      - name: Byte-compile sources
+        run: |
+          python -m compileall -q src
+          python -m compileall -q tools/postlayout-verify examples
+      - name: CLI smoke (no server)
+        run: |
+          apilot --help
+          apilot init eda-demo@example.com --env /tmp/apilot.env --force
+          test -f /tmp/apilot.env

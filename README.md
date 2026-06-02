@@ -10,12 +10,10 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/GuoJiacheng0402/analog-pilot/actions/workflows/ci.yml"><img src="https://github.com/GuoJiacheng0402/analog-pilot/actions/workflows/ci.yml/badge.svg" alt="CI"/></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-GPLv3-blue.svg" alt="GPLv3"/></a>
   <img src="https://img.shields.io/badge/python-3.9%2B-blue.svg" alt="Python 3.9+"/>
   <img src="https://img.shields.io/badge/PDK-CSMC%200.5%C2%B5m%20(CSMC05__M3)-orange" alt="CSMC05_M3"/>
   <img src="https://img.shields.io/badge/EDA-Virtuoso%20IC618%20%C2%B7%20Spectre%20%C2%B7%20Calibre-blueviolet" alt="EDA"/>
-  <img src="https://img.shields.io/badge/验证-实机端到端-success" alt="validated"/>
 </p>
 
 <p align="center">
